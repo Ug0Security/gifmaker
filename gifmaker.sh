@@ -16,7 +16,7 @@ nb=`echo "$div + 1" | bc`
 echo "La video $1 fait $total secondes"
 echo "On capture une photo toutes les $sec secondes ça fait donc $nb photos" 
 for i in $(eval echo "{0..$div}") ;do temps=$(echo $i*10 | bc); ffmpeg -accurate_seek -ss $temps -i $1   -frames:v 1 photo_temp_$i.jpg -hide_banner -loglevel quiet; echo "photo $i capturée";done
-echo "$nb Photos prises... OK"
+echo "$nb Photos capturées... OK"
 echo "Maintenant on resize"
 mogrify -resize 20% photo_temp_*.jpg
 echo "Resize... OK"
