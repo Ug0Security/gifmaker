@@ -1,5 +1,5 @@
 if [ $# -eq 0 ]; then
-    echo -n -e "usage : bash gitmaker.sh video_input "
+    echo -n -e "usage : bash gifmaker.sh video_input"
     exit 1
 fi
 
