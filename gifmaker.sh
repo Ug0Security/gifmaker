@@ -22,6 +22,6 @@ mogrify -resize 20% photo_temp_*.jpg
 echo "Resize... OK"
 echo "Maintenant on construit le GIF"
 convert -limit memory 3MB -delay 100 -loop 0 photo_temp_*.jpg $1.gif
-echo "Gif Créé... OK"
+echo "GIF $1.gif Créé... OK"
 echo "Maintenant on clean"
 rm photo_temp_*.jpg
